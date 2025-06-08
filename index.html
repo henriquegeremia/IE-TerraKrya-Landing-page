@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IÊ - Inteligência Ecológica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilo customizado para o corpo da página usando a fonte Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho de Navegação -->
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="#hero" class="text-2xl font-bold text-green-800">IÊ</a>
+                
+                <!-- Navegação para Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#desafio" class="text-gray-600 hover:text-green-700 transition-colors">O Desafio</a>
+                    <a href="#solucao" class="text-gray-600 hover:text-green-700 transition-colors">A Resposta</a>
+                    <a href="#resultados" class="text-gray-600 hover:text-green-700 transition-colors">Resultados</a>
+                    <a href="#publico" class="text-gray-600 hover:text-green-700 transition-colors">Para Quem</a>
+                    <a href="#futuro" class="text-gray-600 hover:text-green-700 transition-colors">Futuro</a>
+                </nav>
+
+                <a href="#contato" class="hidden md:inline-block bg-green-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-green-800 transition-transform transform hover:scale-105">
+                    Fale Conosco
+                </a>
+
+                <!-- Botão do Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Menu Mobile (escondido por padrão) -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#desafio" class="text-gray-600 hover:text-green-700 transition-colors">O Desafio</a>
+                    <a href="#solucao" class="text-gray-600 hover:text-green-700 transition-colors">A Resposta</a>
+                    <a href="#resultados" class="text-gray-600 hover:text-green-700 transition-colors">Resultados</a>
+                    <a href="#publico" class="text-gray-600 hover:text-green-700 transition-colors">Para Quem</a>
+                    <a href="#futuro" class="text-gray-600 hover:text-green-700 transition-colors">Futuro</a>
+                    <a href="#contato" class="w-full text-center bg-green-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-green-800 transition-transform transform hover:scale-105">
+                        Fale Conosco
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Seção Hero -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1538313451522-e1d743a1372b?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 p-6 max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">A floresta fala.<br>O IÊ escuta.</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light">
+                    A castanha-da-amazônia movimenta milhões no mercado internacional. Mas quem a coleta, cuida e protege a floresta ainda negocia no escuro. O IÊ nasceu para mudar isso: transformar dados em poder para comunidades extrativistas.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#solucao" class="w-full sm:w-auto bg-white text-green-800 font-bold px-8 py-3 rounded-lg text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-lg">
+                        Conheça o IÊ
+                    </a>
+                    <a href="#contato" class="w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-lg text-lg hover:bg-white hover:text-green-800 transition-all transform hover:scale-105 shadow-lg">
+                        Fale com a equipe
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. O Desafio -->
+        <section id="desafio" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <div class="flex justify-center mb-6">
+                    <i data-lucide="eye-off" class="w-16 h-16 text-amber-600"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Invisibilidade e falta de dados</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    A cadeia da castanha é vital para a sociobioeconomia amazônica, mas funciona com altíssima informalidade. Famílias extrativistas negociam com pouca informação, baixo poder de barganha e enfrentam atravessadores, instabilidade de preços e falta de transparência. Dados oficiais existem, mas são incompletos, desatualizados e inacessíveis para quem realmente precisa.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. A Resposta -->
+        <section id="solucao" class="py-20 lg:py-32 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto mb-16">
+                    <div class="flex justify-center mb-6">
+                         <i data-lucide="bot-message-square" class="w-16 h-16 text-green-700"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">A resposta: tecnologia da floresta</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Em 2017, um grupo de extrativistas criou um grupo de WhatsApp para trocar informações sobre preços da castanha. Esse gesto coletivo deu origem ao IÊ: um sistema de inteligência econômica ecológica criado com e para quem vive da floresta. Hoje, o IÊ é a maior base de dados participativa sobre castanha-da-amazônia no país.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Cards de Funcionalidades -->
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="bar-chart-3" class="w-12 h-12 text-green-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Preços e Dados</h3>
+                        <p class="text-gray-600">Registro de preços e dados ecológicos direto da fonte.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="leaf" class="w-12 h-12 text-green-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Cadastro Completo</h3>
+                        <p class="text-gray-600">Cadastro de espécies, produtos e certificações.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="wifi-off" class="w-12 h-12 text-green-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Uso Flexível</h3>
+                        <p class="text-gray-600">Funciona offline e via chatbot no WhatsApp.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="file-text" class="w-12 h-12 text-green-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Relatórios e Análises</h3>
+                        <p class="text-gray-600">Boletins com análises mensais para apoiar decisões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Resultados -->
+        <section id="resultados" class="py-20 lg:py-32 bg-green-800 text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto mb-16">
+                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Resultados da primeira safra</h2>
+                     <p class="text-lg text-green-200 leading-relaxed">
+                        Na primeira safra com uso do IÊ, as informações viraram boletins compartilhados com centenas de extrativistas, fortalecendo a negociação e a segurança nas vendas.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-12 text-center">
+                    <div class="flex flex-col items-center">
+                        <span class="text-6xl lg:text-7xl font-extrabold text-amber-400">~400</span>
+                        <span class="mt-2 text-xl font-semibold">Dados de Preço</span>
+                        <p class="text-green-200 max-w-xs">Registros reais coletados na primeira safra.</p>
+                    </div>
+                     <div class="w-px h-24 bg-green-600 hidden md:block"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-6xl lg:text-7xl font-extrabold text-amber-400">7</span>
+                        <span class="mt-2 text-xl font-semibold">Estados Amazônicos</span>
+                        <p class="text-green-200 max-w-xs">Cobertura inicial com Mobilizadores Regionais.</p>
+                    </div>
+                     <div class="w-px h-24 bg-green-600 hidden md:block"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-6xl lg:text-7xl font-extrabold text-amber-400">100s</span>
+                        <span class="mt-2 text-xl font-semibold">Extrativistas</span>
+                        <p class="text-green-200 max-w-xs">Alcançados com informações estratégicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Para quem é o IÊ? -->
+        <section id="publico" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Para quem é o IÊ?</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        O IÊ foi pensado para fortalecer a base extrativista e conectar diferentes atores que constroem a sociobiodiversidade.
+                    </p>
+                </div>
+                <div class="max-w-5xl mx-auto overflow-x-auto">
+                    <div class="shadow-lg rounded-xl overflow-hidden">
+                        <table class="w-full text-left min-w-[600px]">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-6 text-lg font-bold text-gray-700">Perfil</th>
+                                    <th class="p-6 text-lg font-bold text-gray-700">Como se beneficia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-6 font-semibold text-gray-800">Extrativistas</td>
+                                    <td class="p-6 text-gray-600">Negociação com dados reais e mais justos.</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-6 font-semibold text-gray-800">Gestores públicos</td>
+                                    <td class="p-6 text-gray-600">Subsídios para decisões e editais de apoio.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-6 font-semibold text-gray-800">Apoiadores e financiadores</td>
+                                    <td class="p-6 text-gray-600">Transparência e monitoramento de impacto.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-6 font-semibold text-gray-800">Organizações parceiras</td>
+                                    <td class="p-6 text-gray-600">Integração com redes e boas práticas.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Visão de futuro -->
+        <section id="futuro" class="py-20 lg:py-32 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <!-- Coluna de Texto -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Visão de Futuro</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            O IÊ começou com a castanha, mas pode apoiar outras cadeias da sociobiodiversidade. É um sistema em expansão, que prevê:
+                        </p>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <i data-lucide="map" class="w-8 h-8 text-green-600 mr-4 flex-shrink-0 mt-1"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Dados Geoespaciais</h3>
+                                    <p class="text-gray-600">Integração com mapas e dados para uma visão territorial completa.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="trending-up" class="w-8 h-8 text-green-600 mr-4 flex-shrink-0 mt-1"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Previsão com IA</h3>
+                                    <p class="text-gray-600">Uso de inteligência artificial para prever tendências de preços.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="sprout" class="w-8 h-8 text-green-600 mr-4 flex-shrink-0 mt-1"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Novos Produtos</h3>
+                                    <p class="text-gray-600">Expansão para pirarucu, borracha, sementes nativas e outros.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Coluna da Imagem -->
+                    <div class="mt-10 lg:mt-0">
+                        <img src="https://images.unsplash.com/photo-1615869133293-27a0a6d1493c?q=80&w=1974&auto=format&fit=crop" alt="Castanhas-da-amazônia em uma cesta" class="rounded-xl shadow-2xl object-cover w-full h-auto aspect-square">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Chamada para Ação Final -->
+        <section id="contato" class="py-20 lg:py-32 bg-green-900 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Junte-se a nós</h2>
+                <p class="text-lg text-green-200 max-w-2xl mx-auto mb-10">
+                   Quer entender melhor como o IÊ funciona? Apoiar o projeto? Levar para sua região? A gente está por aqui.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="w-full sm:w-auto bg-amber-400 text-green-900 font-bold px-8 py-3 rounded-lg text-lg hover:bg-amber-300 transition-all transform hover:scale-105 shadow-lg">
+                        Ver resumo institucional
+                    </a>
+                    <a href="#" class="w-full sm:w-auto bg-white text-green-800 font-bold px-8 py-3 rounded-lg text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-lg">
+                        Quero apoiar o IÊ
+                    </a>
+                    <a href="#" class="w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-lg text-lg hover:bg-white hover:text-green-800 transition-all transform hover:scale-105 shadow-lg">
+                        Falar com a equipe
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 IÊ - Inteligência Ecológica. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Construindo um futuro mais justo para a floresta e seus povos.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicia os ícones do Lucide
+        lucide.createIcons();
+
+        // Lógica para o menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons(); // Recria o ícone para refletir a mudança
+        });
+    </script>
+
+</body>
+</html>
